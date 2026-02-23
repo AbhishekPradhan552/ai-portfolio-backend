@@ -12,7 +12,10 @@ app = FastAPI(
 # CORS (for frontend connection later)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # change to Vercel URL in production
+    allow_origins=[
+        "http://localhost:5173",
+        "https://ai-portfolio-frontend-three.vercel.app"
+    ],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
